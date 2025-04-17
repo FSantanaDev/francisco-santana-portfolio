@@ -1,0 +1,464 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base para o rem */
+}
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+:root {
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+    --padding-section: 4rem; /* Padding padrão para as seções */
+    --gap-medium: 2rem;
+}
+
+.enfase {
+    font-weight: bold;
+    color: var(--secundaria);
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* Navegação */
+.navegacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(15, 23, 42, 0.95);
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between; /* Espaço entre o botão e o menu em telas maiores */
+    align-items: center;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--claro);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: none; /* Oculto por padrão em telas maiores */
+}
+
+.hamburger {
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: var(--claro);
+    margin: 0.3rem 0;
+    display: block;
+    transition: 0.4s;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: var(--gap-medium);
+    margin: 0;
+    padding: 0;
+}
+
+.menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.95);
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 10; /* Garante que o menu aberto fique acima de outros elementos */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--claro);
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after {
+    content: '';
+    height: 0.1rem;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--padding-section) 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 15rem;
+    height: 15rem;
+    box-shadow: 0 0 1rem rgba(79, 70, 229, 0.3);
+    border-radius: 50%;
+    border: 0.2rem solid var(--vidro);
+    margin-bottom: 1rem;
+    animation: flutuar 5s ease-in-out infinite alternate;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primaria);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.cabecalho-subtitulo {
+    font-size: 1.2rem;
+    color: var(--claro);
+}
+
+/* Sobre Mim */
+.sobre {
+    padding: var(--padding-section) 1rem;
+}
+
+.sobre-titulo {
+    font-size: 2rem;
+    color: var(--claro);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+.sobre-paragrafo {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.sobre-caixa-botao {
+    margin-top: 1.5rem;
+}
+
+.sobre-botao {
+    background-color: var(--vidro);
+    color: var(--claro);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sobre-botao:hover {
+    background-color: var(--escuro);
+}
+
+/* Tecnologias */
+.tecnologias {
+    padding: var(--padding-section) 1rem;
+}
+
+.sobre-tecnologias-titulo {
+    font-size: 2rem;
+    color: var(--claro);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sobre-tecnologias-caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.sobre-tecnologias-paragrafo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.tecnologias-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tecnologia-categoria {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.tecnologia-categoria h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.tecnologia-imagens {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-medium);
+    flex-wrap: wrap;
+}
+
+.tecnologia-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sobre-imagem {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.tecnologia-nome {
+    font-size: 1rem;
+    color: var(--claro);
+}
+
+/* Projetos */
+.projetos {
+    padding: var(--padding-section) 1rem;
+    margin-bottom: 4rem;
+}
+
+.projetos-titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--claro);
+}
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--gap-medium);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.projetos-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(79, 70, 229, 0.3);
+    transform: translateY(-0.25rem) scale(1.01);
+}
+
+.projetos-imagem {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.caixa-texto-projetos {
+    padding: 1.5rem;
+}
+
+.caixa-texto-projetos h3 {
+    margin-bottom: 0.75rem;
+    color: var(--claro);
+}
+
+.caixa-texto-projetos p {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+/* Contatos */
+.contato {
+    padding: var(--padding-section) 1rem;
+    text-align: center;
+}
+
+.contatos-titulo {
+    font-size: 2rem;
+    color: var(--claro);
+    margin-bottom: 2rem;
+}
+
+.formulario-contato {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+.campo-form {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.25rem;
+    color: var(--claro);
+    border: 1px solid var(--vidro);
+    outline: none;
+    font-size: 1rem;
+}
+
+.campo-form:focus {
+    border-color: var(--primaria);
+    box-shadow: 0 0 0.5rem rgba(79, 70, 229, 0.3);
+}
+
+.botao-form {
+    color: var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.botao-form:hover {
+    box-shadow: 0 0.5rem 0.5rem rgba(79, 70, 229, 0.3);
+    transform: translateY(-0.1rem);
+}
+
+/* Partículas (manter como está, se estiver funcionando) */
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background:
+        radial-gradient(circle, at 10% 20% , var(--primaria) 0% , transparent 20% ),
+        radial-gradient(circle, at 90% 80% , var(--secundaria) 0% , transparent 20% ), var(--maisEscuro);
+}
+
+/* Animação de flutuação (manter como está) */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.5rem);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navegacao {
+        justify-content: space-between; /* Garante espaço entre o logo/título e o botão */
+    }
+
+    .menu {
+        display: none; /* Oculta o menu em telas menores */
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o botão de hambúrguer */
+    }
+
+    .cabecalho h1 {
+        font-size: 2rem;
+    }
+
+    .cabecalho-subtitulo {
+        font-size: 1rem;
+    }
+
+    .sobre-titulo {
+        font-size: 1.75rem;
+    }
+
+    .sobre-tecnologias-titulo {
+        font-size: 1.75rem;
+    }
+
+    .projetos-titulo {
+        font-size: 1.75rem;
+    }
+
+    .contatos-titulo {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .navegacao {
+        justify-content: center; /* Centraliza o menu em telas maiores */
+    }
+
+    .menu-toggle {
+        display: none !important; /* Garante que o botão hambúrguer não apareça em telas maiores */
+    }
+}

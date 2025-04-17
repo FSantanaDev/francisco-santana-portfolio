@@ -1,0 +1,104 @@
+/* Reset box-sizing para garantir que padding e border não afetem a largura total */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%; /* Aumenta a largura do container */
+    max-width: 800px; /* Largura máxima para evitar esticar demais em telas grandes */
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+section {
+    margin-top: 20px;
+}
+
+section h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.habilidades,
+.empresa {
+    margin-bottom: 1px;
+}
+
+.habilidades-idiomas{
+    margin-top: 70px;
+
+}
+
+.habilidades h3,
+.empresa h3 {
+    margin-top: 0;
+}
+
+.habilidades ul {
+    padding-left: 20px;
+}
+
+.download-container {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.download-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos específicos para impressão (e PDF) */
+@media print {
+    body {
+        background-color: #fff; /* Fundo branco para impressão */
+    }
+
+    .container {
+        width: 100%; /* Ocupa toda a largura da página */
+        max-width: none; /* Remove a largura máxima */
+        margin: 0; /* Remove margens */
+        padding: 10px; /* Reduz o padding para economizar espaço */
+        box-shadow: none; /* Remove a sombra */
+    }
+
+    /* Adicione outros ajustes conforme necessário */
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Francisco Braga Santana</title>
+    <link rel="stylesheet" href="curriculo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="download-container">
+        <button class="download-button" onclick="gerarPDF()">
+            Gerar Currículo em PDF
+        </button>
+    </div>
+
+    <div class="container" id="conteudo-pdf">
+        <header>
+            <h1>FRANCISCO BRAGA SANTANA</h1>
+            <p>Rua: Santa Helena, Nº 29 - Aleixo</p>
+            <p>Fone: (92) 99988-9392 / 99115-5839</p>
+            <p>Email: bragasan1@yahoo.com.br</p>
+            <p>Github:  https://github.com/FSantanaDev</p>
+            <p>Portifólio:  https://github.com/FSantanaDev</p>
+        </header>
+
+        <section class="objetivo">
+            <h2>Objetivo Profissional</h2>
+            <p>Em transição para a área de Análise e Desenvolvimento de Sistemas, buscando oportunidades para aplicar e aprimorar conhecimentos em desenvolvimento de software, gestão de projetos e soluções tecnológicas. Almejo contribuir com minha experiência em liderança e gestão para o sucesso de projetos inovadores.</p>
+        </section>
+
+        <section class="formacao">
+            <h2>Formação Acadêmica</h2>
+            <p>Cursando: Análise e Desenvolvimento de Sistemas - Uninorte</p>
+            <p>Técnico em Informática - Fundação Nokia de Ensino</p>
+        </section>
+
+
+        <section class="cursos-habilidades">
+            <h2>Cursos e Habilidades</h2>
+            <div class="habilidades">
+                <h3>Linguagens de Programação e Frameworks</h3>
+                <p>Python, Django Framework, JavaScript, HTML, CSS</p>
+            </div>
+            <div class="habilidades">
+                <h3>Bancos de Dados</h3>
+                <p>SQL Server</p>
+            </div>
+
+            <div class="habilidades">
+                <h3>Outras Habilidades Técnicas</h3>
+                <ul>
+                    <li>Informática Nível Avançado (Windows, Pacote Office)</li>
+                    <li>Sistema SAP</li>
+                </ul>   
+            </div>
+            <div class="habilidades">
+                <h3>Habilidades de Gestão e Processos</h3>
+                <ul>
+                    <li>Introdução ao Lean Manufacturing</li>                    
+                    <li>Metrologia</li>
+                    <li>7 Ferramentas da Qualidade</li>
+                    <li>CEP/PDCA/FMEA</li>                   
+                    <li>Leitura de Componentes</li>
+                    <li>Formação de Líderes / Chefia e Liderança</li>
+                    <li>Planejamento e Gestão de Conflitos</li>
+                </ul>
+            </div>
+            <div class="habilidades-idiomas">
+                <h3>Idiomas</h3>
+                <p>Inglês Intermediário</p>
+            </div>
+        </section>
+
+        <!-- <section class="formacao">
+            <h2>Formação Acadêmica</h2>
+            <p>Cursando: Análise e Desenvolvimento de Sistemas - Uninorte</p>
+            <p>Técnico em Informática - Fundação Nokia de Ensino</p>
+        </section> -->
+
+        <section class="experiencia">
+            <h2>Histórico Profissional</h2>
+            <div class="empresa">
+                <h3>SESI – Serviço Social da Industria.</h3>
+                <p>Cargo: PAT - Profissional de Apoio Técnico</p>
+                <p>Função: Acompanhamento e suporte a usuários do Sistema de Gerenciamento da Saúde.</p>
+                <p> Salário Atual: R$ 3.206,99</p>
+                <p>Período: Ocupaçao Atual desde 07/2019</p>
+            </div>
+            <div class="empresa">
+                <h3>Salcomp Industria Ltda.</h3>
+                <p>Cargo: Líder de Produção</p>
+                <p>Função: Coordenar Linha de Produção de cabos de carregador para celular, Acompanhamento de produção, Apontamentos, Gestão de Pessoal.</p>
+                <p>Período: 08/2015 a 12/2015</p>
+            </div>
+            <div class="empresa">
+                <h3>Flex Industries Ltda.</h3>
+                <p>Cargo: Líder de Produção</p>
+                <p>Função: Coordenar Linha de Produção de Placas Eletrônicas, Controle de Absenteísmo, Relatórios de Produção em geral, Gestão de Pessoal, Controle de Produção.</p>
+                <p>Período: 04/2014 a 10/2015</p>
+            </div>
+            <div class="empresa">
+                <h3>Envision Indústria Eletrônica da Amazônia Ltda.</h3>
+                <p>Cargo: Líder de Produção</p>
+                <p>Função: Coordenar Linha (Esteira/Célula) de Produção de Televisores, Monitores e Linhas de Preparação para a Produção, Controle de Absenteísmo, Relatórios de Produção em geral, Gestão de Pessoal.</p>
+                <p>Período: 10/2011 a 08/2013</p>
+            </div>
+            <div class="empresa">
+                <h3>Tectoy da Amazônia Ltda.</h3>
+                <p>Cargo: Líder de SMD</p>
+                <p>Função: Coordenar Linha de Produção SMD, Programação, Manutenção e Operação de máquinas SMD Fuji CP – 743, CP – 643, Máquina EKRA e Forno de Refusão ERSA, Controle de Materiais, Controle de Produção e Geração de Relatórios de Produção em geral.</p>
+                <p>Período: 04/2010 a 11/2010</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function gerarPDF() {
+            const elemento = document.getElementById('conteudo-pdf');
+            const opt = {
+                margin: 5,
+                filename: 'Francisco_Santana_Curriculo.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // New Promise-based usage:
+            html2pdf().from(elemento).set(opt).save();
+        }
+    </script>
+</body>
+</html>

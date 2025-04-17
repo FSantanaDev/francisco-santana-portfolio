@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+  
+    <title>Francisco Santana | Portfólio</title>
+</head>
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao" id="navegacao">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu">
+            <span class="hamburger"></span>
+            <span class="visually-hidden">Menu</span>
+        </button>
+        <ul class="menu" id="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#tecnologias" class="menu-link">Tecnologias</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="img_profile.png" alt="Foto de perfil de Francisco Santana" class="foto-perfil" />
+        <h1>FRANCISCO SANTANA</h1>
+        <p class="cabecalho-subtitulo">
+            Estudante de Análise e Desenvolvimento de Sistemas </p>
+         <p class="cabecalho-subtitulo">
+            Desenvolvedor Python-Web
+        </p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá, meu nome é Francisco Santana, estudante de Análise e Desenvolvimento de Sistemas.
+            </p>
+            <p class="sobre-paragrafo">
+                Minha curiosidade e interesse em entender como a <strong class="enfase">tecnologia</strong> é construída me levaram ao mundo da <strong class="enfase">programação</strong>, e me trouxeram o objetivo de criar <strong class="enfase">experiências digitais</strong> únicas.
+            </p>
+            <p class="sobre-paragrafo">
+                Busco uma oportunidade em uma empresa que me permita crescer profissionalmente e contribuir para o sucesso na construção de soluções.
+            </p>
+            <p class="sobre-paragrafo">
+                Acredito no <strong class="enfase">aprendizado contínuo</strong> e na minha capacidade de agregar valor.
+            </p>
+            <p class="sobre-paragrafo">
+                Persistência, capacidade de evolução e de enfrentar desafios e obstáculos são as características que me direcionam para entregar resultados de alta qualidade.
+            </p>
+            <div class="sobre-caixa-botao">
+                <a href="curriculo.html" target="_blank">
+                    <button class="sobre-botao">Visualizar Currículo</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologias" class="tecnologias">
+        <h2 class="sobre-tecnologias-titulo">Tecnologias</h2>
+        <div class="sobre-tecnologias-caixa">
+            <p class="sobre-tecnologias-paragrafo">Conhecimentos em:</p>
+            <div class="tecnologias-lista">
+                <div class="tecnologia-categoria">
+                    <h3>Linguagens de Programação:</h3>
+                    <div class="tecnologia-imagens">
+                        <div class="tecnologia-item" >
+                            <img src="python-icon-transparent-background-free.png" alt="Ícone da linguagem Python" class="sobre-imagem" />
+                            <p class="tecnologia-nome">Python</p>
+                        </div>
+                        <div class="tecnologia-item">
+                            <img src="javascript-logo.png" alt="Ícone da linguagem JavaScript" class="sobre-imagem" />
+                            <p class="tecnologia-nome">JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologia-categoria">
+                    <h3>Linguagens de Marcação e Estilo:</h3>
+                    <div class="tecnologia-imagens">
+                        <div class="tecnologia-item" >
+                            <img src="logo-html-5.png" alt="Ícone da linguagem HTML5" class="sobre-imagem" />
+                            <p class="tecnologia-nome">HTML</p>
+                        </div>
+                        <div class="tecnologia-item">
+                            <img src="logo-css.png" alt="Ícone da linguagem CSS3" class="sobre-imagem" />
+                            <p class="tecnologia-nome">CSS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologia-categoria">
+                    <h3>Frameworks Web:</h3>
+                    <div class="tecnologia-imagens">
+                        <div class="tecnologia-item" >
+                            <img src="django-logo-negative.png" alt="Ícone do framework Django" class="sobre-imagem" />
+                            <p class="tecnologia-nome">Django</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tecnologia-categoria">
+                    <h3>Banco de Dados:</h3>
+                    <div class="tecnologia-imagens">
+                        <div class="tecnologia-item" >
+                            <img src="sql.jpg" alt="Ícone do SQL Server" class="sobre-imagem" />
+                            <p class="tecnologia-nome">SQL Server</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <a href="https://meuticket-kdd1.onrender.com" target="_blank">
+                    <img
+                        src="MeuTicket.png"
+                        alt="Imagem do projeto MeuTicket"
+                        class="projetos-imagem"
+                    />
+                </a>
+                <div class="caixa-texto-projetos">
+                    <h3>MeuTicket</h3>
+                    <p>
+                        MeuTicket é um sistema de gestão de demandas desenvolvido com
+                        Django, projetado para otimizar o fluxo de trabalho e a
+                        comunicação entre operadores e a equipe de suporte. O sistema visa
+                        melhorar a organização, eficiência e comunicação nas operações de
+                        suporte, demonstrando habilidades em desenvolvimento web com
+                        Django.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <a href="https://jc-lanches.vercel.app/" target="_blank">
+                    <img
+                        src="JC BURGUER.png"
+                        alt="Imagem do projeto JC Burguer"
+                        class="projetos-imagem"
+                    />
+                </a>
+                <div class="caixa-texto-projetos">
+                    <h3>JC Burguer</h3>
+                    <p>
+                        Aplicação Web para Compra de Lanches Online. Desenvolvido com HTML, Tailwind CSS e JavaScript, este projeto facilita a
+                        experiência de compra de lanches online. A landing page integra a API do WhatsApp para o envio direto ao
+                        proprietário das informações do pedido, incluindo itens, entrega e pagamento.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <a href="https://franciscosantana.pythonanywhere.com/" target="_blank">
+                    <img
+                        src="BragaMusic.png"
+                        alt="Imagem do projeto BragaMusic"
+                        class="projetos-imagem"
+                    />
+                </a>
+                <div class="caixa-texto-projetos">
+                    <h3>BragaMusic</h3>
+                    <p>
+                        BragaMusic: Aplicação Web Full-Stack para Venda de Instrumentos Musicais. Construído com Python no backend (Django) e HTML, CSS e JavaScript no frontend, o BragaMusic simula uma plataforma de e-commerce para instrumentos musicais. Uma funcionalidade chave é a integração com a API do Mercado Pago, demonstrando a capacidade de implementar fluxos de pagamento online de forma segura e integrada.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contato">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input type="text" placeholder="Nome" class="campo-form" id="nome" required />
+            </div>
+            <div class="grupo-form">
+                <textarea
+                    class="campo-form"
+                    placeholder="Digite sua Mensagem" rows="4" id="mensagem" required
+                ></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5592999889392';
+
+            const texto = `Olá, me chamo ${nome}. ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+            console.log(url);
+            window.open(url, '_blank');
+        }
+
+        // Script para o menu hambúrguer (opcional, para melhor UX em mobile)
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('#menu');
+
+        if (menuToggle && menu) {
+            menuToggle.addEventListener('click', () => {
+                const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                menuToggle.setAttribute('aria-expanded', !expanded);
+                menu.classList.toggle('open');
+            });
+
+            // Fechar o menu ao clicar em um link (opcional)
+            const menuLinks = menu.querySelectorAll('.menu-link');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.setAttribute('aria-expanded', false);
+                    menu.classList.remove('open');
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
